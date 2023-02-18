@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        *
+        {
+            padding: 0px;
+            margin: 0px;
+        }
+        body
+        {
+            background-image: url('./Background\ for\ calculator.jpg');
+            background-size: 100%;
+        }
+        #container
+        {
+            width: 25vw;
+            height: 75vh;
+            background-color: black;
+            position: relative;
+            left: 37%;
+            top: 15vh;
+            border-radius: 25px;
+            box-shadow: 0px 0px 10px grey;
+            opacity: 0.85;
+        }
+        .inp
+        {
+            width: 24.7vw;
+            height: 15vh;
+            border-radius: 25px 25px 0px 0px;
+            font-size: 45px;
+            background-color: rgb(48, 45, 45);
+            color: white;
+            
+        }
+        .btn
+        {
+            width: 70px;
+            height: 70px;
+            margin-top: 10px;
+            margin-left: 10px;
+            border-radius: 100px;
+            font-size: 30px;
+            background-color: grey;
+            color: white;
+        }
+        .btn1
+        {
+            background-color: orange;
+        }
+        .btn2
+        {
+            width: 120px;
+            height: 50px;
+            margin-top: 10px;
+            margin-left: 29px;
+            border-radius: 40px;
+            font-size: 30px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <form name="cform">
+        <input class="inp" name="Ans">
+        <br>
+        <input onmousedown="clicksound()" class="btn" type="button" value="1" onclick="cform.Ans.value +='1'">
+        <input onmousedown="clicksound()" class="btn" type="button" value="2" onclick="cform.Ans.value +='2'">
+        <input onmousedown="clicksound()" class="btn" type="button" value="3" onclick="cform.Ans.value +='3'">
+        <input onmousedown="clicksound()" class="btn btn1" type="button" value="+" onclick="cform.Ans.value +='+'">
+        <br>
+        <input onmousedown="clicksound()" class="btn" type="button" value="4" onclick="cform.Ans.value +='4'">
+        <input onmousedown="clicksound()" class="btn" type="button" value="5" onclick="cform.Ans.value +='5'">
+        <input onmousedown="clicksound()" class="btn" type="button" value="6" onclick="cform.Ans.value +='6'">
+        <input onmousedown="clicksound()" class="btn btn1" type="button" value="-" onclick="cform.Ans.value +='-'">
+        <br>
+        <input onmousedown="clicksound()" class="btn" type="button" value="7" onclick="cform.Ans.value +='7'">
+        <input onmousedown="clicksound()" class="btn" type="button" value="8" onclick="cform.Ans.value +='8'">
+        <input onmousedown="clicksound()" class="btn" type="button" value="9" onclick="cform.Ans.value +='9'">
+        <input onmousedown="clicksound()" class="btn btn1" type="button" value="*" onclick="cform.Ans.value +='*'">
+        <br>
+        <input onmousedown="clicksound()" class="btn" type="button" value="%" onclick="cform.Ans.value +='%'">
+        <input onmousedown="clicksound()" class="btn" type="button" value="0" onclick="cform.Ans.value +='0'">
+        <input onmousedown="clicksound()" class="btn" type="button" value="." onclick="cform.Ans.value +='.'">
+        <input onmousedown="clicksound()" class="btn btn1" type="button" value="/" onclick="cform.Ans.value +='/'">
+        <br>
+        <input onmousedown="clicksound()" class="btn2" type="button" value="=" onclick="cform.Ans.value =eval(cform.Ans.value)">
+        <input onmousedown="clicksound()" class="btn2"  type="button" value="C" onclick="cform.Ans.value =' '">
+       
+        <br>
+    </form>
+</div>
+<script>
+    function clicksound()
+    {
+        var clicksound=new Audio()
+        clicksound.src="littletap.mp3"
+        clicksound.play()
+    }
+</script>
+</body>
+</html>
